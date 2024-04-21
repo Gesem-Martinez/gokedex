@@ -83,8 +83,11 @@ func baseMap(locationsData LocationAreas, config *Config) error {
     config.Previous = ""
   }
 
-  fmt.Println("Locations Fetched:")
-  fmt.Println(locationsData.Results)
+  fmt.Println()
+  for _, area := range locationsData.Results {
+    fmt.Println(area.Name)
+  }
+  fmt.Println()
   return nil
 }
 
